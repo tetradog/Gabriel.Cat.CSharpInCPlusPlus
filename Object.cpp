@@ -1,7 +1,4 @@
-#include <stdio.h>
-#include <typeinfo>
-#include <string>
-using namespace std;
+#include "Object.h"
 class Object {
 public: 
 	Object() {}

@@ -1,104 +1,94 @@
-#include <stdio.h>
-#include <iostream>
-#include <string>
-#include <sstream>
-using namespace std;
+#include "Consola.h"
 
-class Consola
+
+char Consola::Read()
 {
-private:
-	const int ENDBUFFER = 1;
-	int sizeBuffer;
-	int posRead;
-	string strRead;
-public:
+    char caracter;
+    //si no hay string 
+    if (sizeBuffer == ENDBUFFER)
+    {
+        strRead = ReadLine();
+        sizeBuffer = strRead.length() + ENDBUFFER;
+        posRead = 0;
+        caracter = strRead[posRead];
+    }
+    else if (posRead < strRead.length())
+    {
 
-	Consola() { strRead = ""; posRead = 0; sizeBuffer = ENDBUFFER; }
-	~Consola() {  }
-	void WriteLine(char caracter)
-	{
-		stringstream stream;
-		string str;
-		stream << caracter;
-		stream >> str;
-		WriteLine(str);
-	}
-	void WriteLine(string str)
-	{
-		str = str + "\n";
-		Write(str);
-	}
-	void WriteLine(char* chrs)
-	{
-		stringstream stream;
-		string str;
-		stream << chrs;
-		stream >> str;
-		WriteLine(str);
-	}
+        caracter = strRead[posRead];
+    }
+    else
+    {
+        if (posRead == strRead.length())
+        {
+            caracter = '\n';
 
-	void Write(char* chrs)
-	{
-		stringstream stream;
-		string str;
-		stream << chrs;
-		stream >> str;
-		Write(str);
-	}
-	void Write(char caracter)
-	{
-		stringstream stream;
-		string str;
-		stream << caracter;
-		stream >> str;
-		Write(str);
-	}
-	void Write(string str)
-	{
-		printf(str.c_str());
-                
-	}
+            sizeBuffer = ENDBUFFER;
+        }
+    }
+    posRead++;
+    return caracter;
+}
 
-	string ReadLine()
-	{
-		string line;
-		getline(cin, line); 
-		return line;
-	}
-	char ReadKey()
-	{
-		char c;
-		std::cin.get(c);
-		return c;
-	}
-	char Read()
-	{
-		char caracter;
-		//si no hay string 
-		if (sizeBuffer == ENDBUFFER)
-		{
-			strRead = ReadLine();
-			sizeBuffer = strRead.length() + ENDBUFFER;
-			posRead = 0;
-			caracter = strRead[posRead];
-		}
-		else if (posRead < strRead.length()) {
+char Consola::ReadKey()
+{
+    char c;
+    std::cin.get(c);
+    return c;
+}
 
-			caracter = strRead[posRead];
-		}
-		else {
-			if (posRead == strRead.length())
-			{	caracter = '\n';
-		
-				sizeBuffer = ENDBUFFER;
-			}
-		}
-		posRead++;
-		return caracter;
+string Consola::ReadLine()
+{
 
-	}
+    string line;
+    getline(cin, line);
+    return line;
+}
 
+void Consola::WriteLine(char caracter)
+{
+    stringstream stream;
+    string str;
+    stream << caracter;
+    stream >> str;
+    WriteLine(str);
+}
 
+void Consola::WriteLine(string str)
+{
+    str = str + "\n";
+    Write(str);
+}
 
+void Consola::WriteLine(char* chrs)
+{
+    stringstream stream;
+    string str;
+    stream << chrs;
+    stream >> str;
+    WriteLine(str);
+}
 
-};
+void Consola::Write(char* chrs)
+{
+    stringstream stream;
+    string str;
+    stream << chrs;
+    stream >> str;
+    Write(str);
+}
+
+void Consola::Write(char caracter)
+{
+    stringstream stream;
+    string str;
+    stream << caracter;
+    stream >> str;
+    Write(str);
+}
+
+void Consola::Write(string str)
+{
+    printf(str.c_str());
+
+}

@@ -35,9 +35,9 @@ OBJECTDIR=${CND_BUILDDIR}/${CND_CONF}/${CND_PLATFORM}
 
 # Object Files
 OBJECTFILES= \
-	${OBJECTDIR}/_ext/e7a6939f/Consola.o \
-	${OBJECTDIR}/_ext/e7a6939f/Object.o \
-	${OBJECTDIR}/_ext/e7a6939f/String.o
+	${OBJECTDIR}/_ext/5c0/Consola.o \
+	${OBJECTDIR}/_ext/5c0/Object.o \
+	${OBJECTDIR}/_ext/5c0/String.o
 
 
 # C Compiler Flags
@@ -66,20 +66,20 @@ ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/libminetframework.a: ${OBJECTFILES}
 	${AR} -rv ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/libminetframework.a ${OBJECTFILES} 
 	$(RANLIB) ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/libminetframework.a
 
-${OBJECTDIR}/_ext/e7a6939f/Consola.o: ../../Visual\ Studio\ 2015/Projects/MyNetFrameWork/Consola.cpp 
-	${MKDIR} -p ${OBJECTDIR}/_ext/e7a6939f
+${OBJECTDIR}/_ext/5c0/Consola.o: ../Consola.cpp 
+	${MKDIR} -p ${OBJECTDIR}/_ext/5c0
 	${RM} "$@.d"
-	$(COMPILE.cc) -O2 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/_ext/e7a6939f/Consola.o ../../Visual\ Studio\ 2015/Projects/MyNetFrameWork/Consola.cpp
+	$(COMPILE.cc) -O2 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/_ext/5c0/Consola.o ../Consola.cpp
 
-${OBJECTDIR}/_ext/e7a6939f/Object.o: ../../Visual\ Studio\ 2015/Projects/MyNetFrameWork/Object.cpp 
-	${MKDIR} -p ${OBJECTDIR}/_ext/e7a6939f
+${OBJECTDIR}/_ext/5c0/Object.o: ../Object.cpp 
+	${MKDIR} -p ${OBJECTDIR}/_ext/5c0
 	${RM} "$@.d"
-	$(COMPILE.cc) -O2 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/_ext/e7a6939f/Object.o ../../Visual\ Studio\ 2015/Projects/MyNetFrameWork/Object.cpp
+	$(COMPILE.cc) -O2 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/_ext/5c0/Object.o ../Object.cpp
 
-${OBJECTDIR}/_ext/e7a6939f/String.o: ../../Visual\ Studio\ 2015/Projects/MyNetFrameWork/String.cpp 
-	${MKDIR} -p ${OBJECTDIR}/_ext/e7a6939f
+${OBJECTDIR}/_ext/5c0/String.o: ../String.cpp 
+	${MKDIR} -p ${OBJECTDIR}/_ext/5c0
 	${RM} "$@.d"
-	$(COMPILE.cc) -O2 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/_ext/e7a6939f/String.o ../../Visual\ Studio\ 2015/Projects/MyNetFrameWork/String.cpp
+	$(COMPILE.cc) -O2 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/_ext/5c0/String.o ../String.cpp
 
 # Subprojects
 .build-subprojects:

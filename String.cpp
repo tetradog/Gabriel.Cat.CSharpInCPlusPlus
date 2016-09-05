@@ -1,7 +1,5 @@
 
-#include "Object.cpp"
-#include <string>
-using namespace std;
+#include "String.h"
 
 class String:public Object {
 private:

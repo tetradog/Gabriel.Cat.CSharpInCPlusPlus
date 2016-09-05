@@ -4,6 +4,11 @@
     <logicalFolder name="HeaderFiles"
                    displayName="Header Files"
                    projectFiles="true">
+      <itemPath>Consola.h</itemPath>
+      <itemPath>../Consola.h</itemPath>
+      <itemPath>../Object.h</itemPath>
+      <itemPath>String.h</itemPath>
+      <itemPath>../String.h</itemPath>
     </logicalFolder>
     <logicalFolder name="ResourceFiles"
                    displayName="Resource Files"
@@ -12,9 +17,9 @@
     <logicalFolder name="SourceFiles"
                    displayName="Source Files"
                    projectFiles="true">
-      <itemPath>../../Visual Studio 2015/Projects/MyNetFrameWork/Consola.cpp</itemPath>
-      <itemPath>../../Visual Studio 2015/Projects/MyNetFrameWork/Object.cpp</itemPath>
-      <itemPath>../../Visual Studio 2015/Projects/MyNetFrameWork/String.cpp</itemPath>
+      <itemPath>../Consola.cpp</itemPath>
+      <itemPath>../Object.cpp</itemPath>
+      <itemPath>../String.cpp</itemPath>
     </logicalFolder>
     <logicalFolder name="TestFiles"
                    displayName="Test Files"
@@ -40,20 +45,21 @@
         <archiverTool>
         </archiverTool>
       </compileType>
-      <item path="../../Visual Studio 2015/Projects/MyNetFrameWork/Consola.cpp"
-            ex="false"
-            tool="1"
-            flavor2="0">
+      <item path="../Consola.cpp" ex="false" tool="1" flavor2="0">
       </item>
-      <item path="../../Visual Studio 2015/Projects/MyNetFrameWork/Object.cpp"
-            ex="false"
-            tool="1"
-            flavor2="0">
+      <item path="../Consola.h" ex="false" tool="3" flavor2="0">
       </item>
-      <item path="../../Visual Studio 2015/Projects/MyNetFrameWork/String.cpp"
-            ex="false"
-            tool="1"
-            flavor2="0">
+      <item path="../Object.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="../Object.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="../String.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="../String.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="Consola.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="String.h" ex="false" tool="3" flavor2="0">
       </item>
     </conf>
     <conf name="Release" type="3">
@@ -78,20 +84,21 @@
         <archiverTool>
         </archiverTool>
       </compileType>
-      <item path="../../Visual Studio 2015/Projects/MyNetFrameWork/Consola.cpp"
-            ex="false"
-            tool="1"
-            flavor2="0">
+      <item path="../Consola.cpp" ex="false" tool="1" flavor2="0">
       </item>
-      <item path="../../Visual Studio 2015/Projects/MyNetFrameWork/Object.cpp"
-            ex="false"
-            tool="1"
-            flavor2="0">
+      <item path="../Consola.h" ex="false" tool="3" flavor2="0">
       </item>
-      <item path="../../Visual Studio 2015/Projects/MyNetFrameWork/String.cpp"
-            ex="false"
-            tool="1"
-            flavor2="0">
+      <item path="../Object.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="../Object.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="../String.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="../String.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="Consola.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="String.h" ex="false" tool="3" flavor2="0">
       </item>
     </conf>
   </confs>
