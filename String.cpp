@@ -1,7 +1,8 @@
-#include "Stdafx.h"
+
 #include "Object.cpp"
 #include <string>
 using namespace std;
+
 class String:public Object {
 private:
 	string str;
@@ -12,9 +13,9 @@ public:
 	        str = string;
 	}
 	~String() {  }
-	char GetChar(int index)
+	char operator [](int index)
 	{
-		return str[index];
+	  return str[index];
 	}
 	string ToString()
 	{
@@ -46,10 +47,6 @@ public:
 		std::copy(str.begin(), str.end(), writable);
 		writable[str.length()] = '\0'; // don't forget the terminating 0
 		return writable;
-	}
-	operator const char*()
-	{
-		return str.c_str;
 	}
 	operator string()
 	{

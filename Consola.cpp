@@ -1,5 +1,5 @@
-#include "stdafx.h"
-#include<iostream>
+#include <stdio.h>
+#include <iostream>
 #include <string>
 #include <sstream>
 using namespace std;
@@ -56,12 +56,13 @@ public:
 	void Write(string str)
 	{
 		printf(str.c_str());
+                
 	}
 
 	string ReadLine()
 	{
 		string line;
-		getline(cin, line);
+		getline(cin, line); 
 		return line;
 	}
 	char ReadKey()

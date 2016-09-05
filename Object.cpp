@@ -1,4 +1,5 @@
-#include "Stdafx.h"
+#include <stdio.h>
+#include <typeinfo>
 #include <string>
 using namespace std;
 class Object {
