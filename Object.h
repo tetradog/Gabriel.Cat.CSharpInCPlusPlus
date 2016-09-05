@@ -17,8 +17,6 @@
 using namespace std;
 class Object {
 public: 
-	Object() {}
-	~Object() {}
 	virtual string ToString();
 	
 	virtual bool Equals(Object other);
