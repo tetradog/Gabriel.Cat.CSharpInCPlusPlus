@@ -27,6 +27,10 @@ private:
 	int sizeBuffer;
 	int posRead;
 	string strRead;
+
+        string PrepareString(char c);
+        string PrepareString(char* c);
+
 public:
 	void WriteLine(char caracter);
 
