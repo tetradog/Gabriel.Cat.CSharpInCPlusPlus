@@ -46,7 +46,7 @@ string Consola::ReadLine()
 }
 
 string Consola::PrepareString(char c){
- return new char(c);
+ return PrepareString(new char(c));
 }
 
 string Consola::PrepareString(char* c){
