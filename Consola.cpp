@@ -45,13 +45,22 @@ string Consola::ReadLine()
     return line;
 }
 
+string PrepareString(char c){
+ return new char(c);
+}
+
+string PrepareString(char* c){
+stringstream stream;
+    string str;
+    stream << c;
+    stream >> str;
+return str;
+}
+
 void Consola::WriteLine(char caracter)
 {
-    stringstream stream;
-    string str;
-    stream << caracter;
-    stream >> str;
-    WriteLine(str);
+    
+    WriteLine(PrepareString(caracter));
 }
 
 void Consola::WriteLine(string str)
@@ -62,29 +71,17 @@ void Consola::WriteLine(string str)
 
 void Consola::WriteLine(char* chrs)
 {
-    stringstream stream;
-    string str;
-    stream << chrs;
-    stream >> str;
-    WriteLine(str);
+    WriteLine(PrepareString(chrs));
 }
 
 void Consola::Write(char* chrs)
 {
-    stringstream stream;
-    string str;
-    stream << chrs;
-    stream >> str;
-    Write(str);
+    Write(PrepareString(chrs));
 }
 
 void Consola::Write(char caracter)
 {
-    stringstream stream;
-    string str;
-    stream << caracter;
-    stream >> str;
-    Write(str);
+    Write(PrepareString(chrs));
 }
 
 void Consola::Write(string str)
