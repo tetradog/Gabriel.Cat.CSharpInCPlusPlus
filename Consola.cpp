@@ -45,11 +45,11 @@ string Consola::ReadLine()
     return line;
 }
 
-string PrepareString(char c){
+string Consola::PrepareString(char c){
  return new char(c);
 }
 
-string PrepareString(char* c){
+string Consola::PrepareString(char* c){
 stringstream stream;
     string str;
     stream << c;
